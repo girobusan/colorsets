@@ -6,8 +6,35 @@ this.highlights = {
   green: "#06f98c" ,
   blue: "#038dff" ,
   yellow: "#d3ff57" ,
-  purple: "#de5bf4" ,
-  gray: "#4e545c"
+  purple: "#f45bc4" ,
+  gray: "#4e586c"
+
+}
+
+this.faded = {
+  1 : "#eb912b" ,
+  2 : "#7099a5" ,
+  3 : "#c71f34" ,
+  4 : "#1d437d" ,
+  5 : "#e8762b" ,
+  6 : "#5b6591" ,
+  7 : "#59879b"
+
+
+}
+
+this.tableau ={
+1:  "#4c77a4",
+2:  "#b17aa0"  ,
+2:  "#e15457" ,
+4:  "#fd9ba3",
+5:  "#f08d29",
+6:  "#ecc846",
+7:  "#58a04d",
+
+8:  "#74b4b0" ,
+9:  "#a0b44a",
+10: "#9c755f"
 
 }
 
@@ -30,6 +57,12 @@ this.vinatge8colors = {
 
  }
 
+ function isFunction(object) {
+  if (typeof object != 'function') return false;
+  var parent = object.constructor && object.constructor.prototype;
+  return parent && hasProperty.call(parent, 'call');
+ }
+
  this.pal2array = function(pal){
    r = []
    for (var k in pal){
@@ -50,11 +83,21 @@ this.vinatge8colors = {
     .data(this.pal2array(pal))
     .enter()
     .append('div')
-    .style("width" , "100px")
-    .style("height" , "100px")
+    .style("width" , "60px")
+    .style("height" , "60px")
     .style("display" , "inline-block")
     .style("background-color" , function(d){return d})
-    .style("border" , "1px solid gray")
+    .style("border" , "0px solid gray")
+ }
+
+ this.gatherPals = function(){
+   var r = {};
+   for(var k in this){
+     if(!isFunction(this[k])){
+       r[k] = this[k];
+     }
+   }
+   return r;
  }
 
 

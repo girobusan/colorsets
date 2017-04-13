@@ -1,13 +1,29 @@
 <html>
+<meta charset="utf-8" />
 <head>
+<link rel = "stylesheet" href = "dropin.css" />
+<link rel = "stylesheet" href = "typebase.css" />
 
 </head>
 <body onload="setup()">
+  <h1>Tests</h1>
+  <p>When you create color palettes for your web design projects,
+    are you testing the color combinations for contrast?
+    If you're not, you might not be considering the eventual
+    readability of the design and thus losing potential audience.
+</p><p>
+I’ve been working on a process to help me ensure good color contrast
+and readability in my projects. Thanks to some helpful color contrast
+accessibility tools, I think I have something that is working and wanted
+to share with others in the event that you find it helpful, too. </p>
   <h2>Highlights</h2>
-<div id="testarea1"></div>
+<p id="testarea1"></div>
 <br clear = "both" />
 <h2>Vitage 8 colors</h2>
-<div id="testarea2"></div>
+<p id="testarea2"></div>
+<br clear = "both" />
+<h2>tableau 10 - like</h2>
+<p id="testarea3"></div>
 <br clear = "both" />
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.7.4/d3.min.js"></script>
@@ -17,6 +33,7 @@ function setup(){
 var cb = new colorbox();
 cb.testpal(cb.highlights , "#testarea1");
 cb.testpal(cb.vinatge8colors , "#testarea2");
+cb.testpal(cb.tableau , "#testarea3");
 
 
 }
