@@ -1,4 +1,9 @@
 function colorbox(){
+/*
+More or less random
+colour sets
+*/
+
 
 this.highlights = {
   orange : "#ffa03d",
@@ -38,6 +43,31 @@ this.tableau ={
 
 }
 
+this.tableau20 = {
+1: "#9edae5" ,
+2: "#17becf" ,
+3: "#dbdb8d" ,
+4: "#bcbd22"  ,
+5: "#c7c7c7"  ,
+6: "#7f7f7f" ,
+7: "#f7b6d2"  ,
+8: "#e377c2" ,
+9: "#c49c94" ,
+10: "#8c564b"  ,
+11: "#c5b0d5" ,
+12: "#9467bd" ,
+13: "#ff9896" ,
+14: "#d62728" ,
+15: "#98df8a",
+16: "#2ca02c" ,
+17: "#ffbb78",
+18: "#ff7f0e" ,
+19: "#aec7e8"  ,
+20: "#1f77b4"
+
+
+}
+
 this.vinatge8colors = {
 
  black : "#000" ,
@@ -58,9 +88,8 @@ this.vinatge8colors = {
  }
 
  function isFunction(object) {
-  if (typeof object != 'function') return false;
-  var parent = object.constructor && object.constructor.prototype;
-  return parent && hasProperty.call(parent, 'call');
+   var getType = {};
+   return object && getType.toString.call(object) === '[object Function]';
  }
 
  this.pal2array = function(pal){
@@ -99,6 +128,8 @@ this.vinatge8colors = {
    }
    return r;
  }
+
+
 
 
 }

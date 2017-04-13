@@ -1,6 +1,7 @@
 <html>
 <meta charset="utf-8" />
 <head>
+  <title>Colour test</title>
 <link rel = "stylesheet" href = "dropin.css" />
 <link rel = "stylesheet" href = "typebase.css" />
 
@@ -22,7 +23,7 @@ to share with others in the event that you find it helpful, too. </p>
 <h2>Vitage 8 colors</h2>
 <p id="testarea2"></div>
 <br clear = "both" />
-<h2>tableau 10 - like</h2>
+<h2>Tableau like (20)</h2>
 <p id="testarea3"></div>
 <br clear = "both" />
 
@@ -33,9 +34,8 @@ function setup(){
 var cb = new colorbox();
 cb.testpal(cb.highlights , "#testarea1");
 cb.testpal(cb.vinatge8colors , "#testarea2");
-cb.testpal(cb.tableau , "#testarea3");
-
-
+cb.testpal(cb.tableau20 , "#testarea3");
+console.log(cb.gatherPals());
 }
 </script>
 </body>
